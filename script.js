@@ -26,12 +26,12 @@ function rederLista() {
 
         let bntexcluir = document.createElement("button");
         bntexcluir.innerText = "Excluir";
-        bntexcluir.onclick = "excluirTarefa()";
+        bntexcluir.onclick = excluirTarefa;
         itemLista.appendChild(bntexcluir);
 
     })
 }
 
-// function excluirTarefa() {
-//     console.log("Excluido");
-// }
+function excluirTarefa() {
+     
+ }
