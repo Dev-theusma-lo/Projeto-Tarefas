@@ -1,7 +1,9 @@
 var inputTarefas = document.getElementById('inputTarefa');
 var lista = document.querySelector('#lista ul');
 
-var listaTarefas = [];
+
+var listaTarefas = JSON.parse(localStorage.getItem("@listaTarefas")) || [];
+renderLista();
 
 function adicionar() {
     if(inputTarefas.value === "" || inputTarefas === null){
@@ -11,12 +13,13 @@ function adicionar() {
         let tarefa = inputTarefas.value;
         listaTarefas.push(tarefa);
         inputTarefas.value = "";
-        rederLista();
+        renderLista();
+        AdicionarStorage();
     }
 
 }
 
-function rederLista() {
+function renderLista() {
     lista.innerHTML = "";
     listaTarefas.map((item)=>{
         
@@ -24,14 +27,34 @@ function rederLista() {
         itemLista.innerHTML = item;
         lista.appendChild(itemLista);
 
-        let bntexcluir = document.createElement("button");
-        bntexcluir.innerText = "Excluir";
-        bntexcluir.onclick = excluirTarefa;
-        itemLista.appendChild(bntexcluir);
+        // let bntexcluir = document.createElement("button");
+        // bntexcluir.innerText = "Excluir";
+        // bntexcluir.onclick = excluirTarefa;
+        // itemLista.appendChild(bntexcluir);
+
+        
+
+        let linkText = document.createTextNode("   Excluir");
+       
+        let posicaoTarefa = listaTarefas.indexOf(item);
+
+        let linkElement = document.createElement("a");
+        linkElement.setAttribute("href", "#");
+        linkElement.onclick = () => excluirTarefa(posicaoTarefa);
+        linkElement.appendChild(linkText);
+
+        itemLista.appendChild(linkElement);
+        
 
     })
 }
 
-function excluirTarefa() {
-     
- }
+function excluirTarefa(posicaoTarefa) {
+     listaTarefas.splice(posicaoTarefa, 1);
+     renderLista();
+     AdicionarStorage();
+}
+
+function AdicionarStorage() {
+    localStorage.setItem("@listaTarefas", JSON.stringify(listaTarefas));
+}
