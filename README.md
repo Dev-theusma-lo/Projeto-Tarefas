@@ -48,3 +48,7 @@ Funciona em qualquer tamanho de tela. Em celulares, o layout se adapta para ser 
 ## Histórico
 
 O projeto começou bem simples, só com a função de adicionar tarefas. Depois foram adicionadas as funcionalidades de deletar e persistência com localStorage. Por último, foi feita uma customização visual completa com CSS, incluindo animações e um design dark mode bem definido.
+
+## Comentários Gerais
+
+O README.md foi feito a partir da ajuda de uma agente de IA, que fez os commits e atualização para o GitHub, porém todo o arquivo realmente representa o processo e o resultado do projeto, pois foi conferido por mim na sua versão final.
