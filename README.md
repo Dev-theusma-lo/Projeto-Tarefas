@@ -9,7 +9,7 @@ Basicamente você consegue adicionar tarefas, visualizar elas em uma lista e rem
 ## Tecnologias usadas
 
 - HTML5 para a estrutura
-- JavaScript vanilla para a lógica
+- JavaScript para a lógica
 - CSS3 com variáveis e animações suaves
 - LocalStorage para armazenar as tarefas
 
@@ -17,9 +17,16 @@ Basicamente você consegue adicionar tarefas, visualizar elas em uma lista e rem
 
 O projeto usa um tema dark mode com uma paleta de cores em tons de azul e cinza. A interface é limpa e responsiva, funcionando bem tanto em desktop quanto em celular.
 
+## Acesso online
+
+O site já está deployado e funcionando na Vercel:
+https://projeto-tarefas-tan.vercel.app/
+
+É só acessar o link e começar a usar.
+
 ## Como usar
 
-1. Abra o arquivo `index.html` em um navegador
+1. Acesse o link acima ou abra o arquivo `index.html` localmente em um navegador
 2. Digite o texto da tarefa no campo
 3. Clique em "Add" ou pressione Enter
 4. Para remover uma tarefa, clique em "Excluir"
